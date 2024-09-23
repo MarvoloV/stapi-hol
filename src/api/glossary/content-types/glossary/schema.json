@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "glossaries",
+  "info": {
+    "singularName": "glossary",
+    "pluralName": "glossaries",
+    "displayName": "Glossary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
+    },
+    "short_description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
