@@ -17,7 +17,7 @@
       "required": true,
       "unique": true
     },
-    "image": {
+    "imagePrev": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -38,6 +38,27 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "imageInner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "blogs"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "blogs"
     }
   }
 }

@@ -32,6 +32,23 @@
     "short_description": {
       "type": "text",
       "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "glossary": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::glossary.glossary",
+      "inversedBy": "glossaries"
+    },
+    "glossaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::glossary.glossary",
+      "mappedBy": "glossary"
     }
   }
 }
